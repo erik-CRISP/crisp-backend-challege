@@ -5,11 +5,11 @@
 You will need to have git and [dotnet 6 SDK installed](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). Note that this code will only run on net6 specifically.
 
 ## Background 
-The purpose of this challenge is to demonstrate one's ability to code up a REST API. The web-application with dotnet run
+The purpose of this challenge is to demonstrate one's ability to code up a REST API. The web-application can be started with:
 ```cmd
 dotnet run src/CRISP.BackendChallenge
 ```
-from the project root. Or Feel free to use any IDE you are comfortable using to run the server.  
+from the project root. Or Feel free to use any IDE you are comfortable using to run the server.
 
 Feel free to test out the server to make sure it works and think about how you might want to solve the questions below, 
 but please don't start coding up a solution before the scheduled interview time.
