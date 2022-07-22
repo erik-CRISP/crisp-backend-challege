@@ -1,5 +1,6 @@
 using CRISP.Backend.Challenge.Context;
 using CRISP.Backend.Challenge.Context.Models;
+using CRISP.BackendChallenge.Context.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRISP.BackendChallenge.Context;
@@ -9,30 +10,28 @@ public class ApplicationDbContext : DbContext
     /// <summary>
     /// Person table accessor
     /// </summary>
-    public DbSet<Person> People { get; set; }
+    public DbSet<Employee> Employees { get; set; }
 
     /// <summary>
     /// Login table accessor
     /// </summary>
     public DbSet<Login> Logins { get; set; }
 
-    public string DbPath { get; }
-
     /// <summary>
     /// Default Constructor
     /// </summary>
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Filename=MyDatabase.db");
+        optionsBuilder.UseSqlite("Filename=App.db");
     }
 
     /// <inheritdoc />
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Person>().HasData(
-            new Person {Id = 1, Name = "John Doe"},
-            new Person {Id = 2, Name = "Jane Doe"},
-            new Person {Id = 3, Name = "Joe Doe"}
+        modelBuilder.Entity<Employee>().HasData(
+            new Employee {Id = 1, Name = "John Doe", Department = Department.Engineering },
+            new Employee {Id = 2, Name = "Jane Doe", Department = Department.Management },
+            new Employee {Id = 3, Name = "Joe Doe", Department = Department.Engineering }
         );
         modelBuilder.Entity<Login>().HasData(
             new Login {Id = 1, PersonId = 1, LoginDate = DateTime.Now.AddMonths(-1)},
