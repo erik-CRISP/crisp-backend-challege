@@ -298,3 +298,4 @@ sleet.json
 /appsettings.Development.json
 
 **/*/CRISP.PanelProcessor/Controllers/TestController.cs
+/src/CRISP.BackendChallenge/MyDatabase.db

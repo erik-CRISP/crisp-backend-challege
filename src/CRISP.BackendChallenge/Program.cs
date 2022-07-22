@@ -1,29 +1,12 @@
-var builder = WebApplication.CreateBuilder(args);
+using CRISP.Backend.Challenge;
+using CRISP.Backend.Challenge.Context;
+using Microsoft.AspNetCore;
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+public static class Program
 {
-    app.UseSwagger(options =>
-    {
-        options.SerializeAsV2 = true;
-    });
-    app.UseSwaggerUI();
+    public static void Main(string[] args) => CreateWebHostBuilder(args).Build().Run();
+
+    private static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+            .UseStartup<Startup>();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
