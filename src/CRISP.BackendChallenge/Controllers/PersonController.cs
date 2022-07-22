@@ -15,9 +15,10 @@ public class PersonController : ControllerBase
         _logger = logger;
     }
 
+    [HttpGet]
     [Route("[action]")]
-    public IActionResult Get()
+    public IActionResult Person()
     {
-        return new NoContentResult();
+        return Ok(new List<Person>());
     }
 }
