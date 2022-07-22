@@ -14,6 +14,41 @@ from the project root. Or Feel free to use any IDE you are comfortable using to 
 Feel free to test out the server to make sure it works and think about how you might want to solve the questions below, 
 but please don't start coding up a solution before the scheduled interview time.
 
+You may access the swagger endpoint: https://localhost:7221/swagger/index.html to explore the existing API. 
+
+Ensure the server is working by performing the following request to the server:
+```curl
+curl -X 'GET' \
+  'https://localhost:7221/Employee' \
+  -H 'accept: */*'
+```
+or generally:
+```http
+GET /Employee HTTP/1.1
+Host: localhost:7221
+```
+
+should return:
+```json
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "loginDates": null
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "loginDates": null
+    },
+    {
+        "id": 3,
+        "name": "Joe Doe",
+        "loginDates": null
+    }
+]
+```
+
 Note that we are using Entity Framework as an ORM for this scaffold and that the underlying database in sqlite. The database should be seeded with data on initialization of 
 the context.
 
