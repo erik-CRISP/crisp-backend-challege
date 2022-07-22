@@ -9,14 +9,12 @@ The purpose of this challenge is to demonstrate one's ability to code up a REST 
 ```cmd
 dotnet run src/CRISP.BackendChallenge
 ```
-from the project root. Or Feel free to use any IDE you are comfortable using to run the server.
+from the project root. 
 
-Feel free to test out the server to make sure it works and think about how you might want to solve the questions below, 
-but please don't start coding up a solution before the scheduled interview time.
+Or Feel free to use any IDE you are comfortable using to run the server.
 
-You may access the swagger endpoint: https://localhost:7221/swagger/index.html to explore the existing API. 
+Test out the server to make sure it works and think about how you might want to solve the questions below.
 
-Ensure the server is working by performing the following request to the server:
 ```curl
 curl -X 'GET' \
   'https://localhost:7221/Employee' \
@@ -48,6 +46,10 @@ should return:
     }
 ]
 ```
+You may access the swagger endpoint: https://localhost:7221/swagger/index.html to explore the existing API. 
+
+*NOTE*: The port may be different than 7221 depending on how you run the server.
+
 
 Note that we are using Entity Framework as an ORM for this scaffold and that the underlying database in sqlite. The database should be seeded with data on initialization of 
 the context.
