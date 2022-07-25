@@ -11,8 +11,10 @@ You will need to have the following installed:
 dotnet 6 is compatiable for windows, mac, and unix.
 
 ## Instructions:
+0. Read the entirity of this readme
 1. Fork the repository
-2. Perform the [Tasks](#Tasks)
+2. Perform the [Tasks](#Tasks) - This is the actual challenge 
+3. Using your fork, issue a PR back to the main branch (we will use the PR as a means to evalute your work)
 
 ## Background 
 The purpose of this challenge is to demonstrate one's ability to code up a REST API backed with an SQL data-store. The web-application can be started with:
@@ -20,6 +22,7 @@ The purpose of this challenge is to demonstrate one's ability to code up a REST 
 ```cmd
 dotnet run src/CRISP.BackendChallenge
 ```
+
 from the project root. 
 
 Or Feel free to use any IDE you are comfortable using to run the server.
