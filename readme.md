@@ -3,15 +3,19 @@
 ## Prerequisites
 
 You will need to have the following installed:
-- git 
+- git and a github account
 - [dotnet 6 SDK installed](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
   - dotnet cli(Included with SDK)
 - dotnet tool Entity Framework  
 
 dotnet 6 is compatiable for windows, mac, and unix.
 
+## Instructions:
+1. Fork the repository
+2. Perform the [Tasks](#Tasks)
+
 ## Background 
-The purpose of this challenge is to demonstrate one's ability to code up a REST API. The web-application can be started with:
+The purpose of this challenge is to demonstrate one's ability to code up a REST API backed with an SQL data-store. The web-application can be started with:
 
 ```cmd
 dotnet run src/CRISP.BackendChallenge
