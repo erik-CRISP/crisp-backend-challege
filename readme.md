@@ -5,19 +5,19 @@
 You will need to have the following installed:
 - git and a github account
 - [dotnet 6 SDK installed](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-  - dotnet cli(Included with SDK)
+  - dotnet cli (Included with SDK)
 - dotnet tool Entity Framework  
 
 dotnet 6 is compatiable for windows, mac, and unix.
 
 ## Instructions:
-0. Read the entirity of this readme
+0. Read the entirety of this readme
 1. Fork the repository
 2. Perform the [Tasks](#Tasks) - This is the actual challenge 
 3. Using your fork, issue a PR back to the main branch (we will use the PR as a means to evalute your work)
 
 ## Background 
-The purpose of this challenge is to demonstrate one's ability to code up a REST API backed with an SQL data-store. The web-application can be started with:
+The purpose of this challenge is to demonstrate one's ability to code up a REST API backed with a SQL data-store. The web-application can be started with:
 
 ```cmd
 dotnet run src/CRISP.BackendChallenge
@@ -65,11 +65,11 @@ You may access the swagger endpoint: https://localhost:7221/swagger/index.html t
 *NOTE*: The port may be different than 7221 depending on how you run the server.
 
 
-Note that we are using Entity Framework as an ORM for this scaffold and that the underlying database in sqlite. The database should be seeded with data on initialization of 
+Note that we are using Entity Framework as an ORM for this scaffold and that the underlying database is in sqlite. The database should be seeded with data on initialization of 
 the context.
 
 ## Tables
-There are two tables in the database `Employee` and `Login`
+There are two tables in the database: `Employees` and `Login`.
 The sql statement below defines the schema for the two tables (note the relationship):
 
 ```sql
@@ -99,10 +99,10 @@ create index IX_Logins_EmployeeId
     on Logins (EmployeeId);
 ```
 
-The `Logins` table tracks all of the logins for the people in person.
+The `Logins` table tracks all of the logins for the employees in `Employees`.
 
 ## Tasks
-We already have code for to retrieve all employees as an example with an example to build upon.
+We already have code to retrieve all employees as an example with an example to build upon.
 
 Implement The Following For The Employee Controller:
   - Get By Id
